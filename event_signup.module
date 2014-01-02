@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Code for the event_signup feature.
+ */
+
+include_once 'event_signup.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ */
+function event_signup_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == "event_signup_node_form") {
+    
+   // hide($form['field_signup_id']);
+    $form['field_signup_id']['und'][0]['value']['#disabled'] =  TRUE;
+  }
+
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function event_signup_node_delete($node){
+  if ($node->type =='event_signup') {
+   // signup_cancel_signup(int($node->field_signup_id['und'][0]['value']));
+   $sid = $node->field_signup_id['und'][0]['value'];
+   $sid = (int)$sid;
+    db_delete('signup_log')
+      ->condition('sid', $sid)
+      ->execute();
+    //node_delete($node->nid);
+  }
+}
