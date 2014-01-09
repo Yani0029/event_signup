@@ -18,13 +18,13 @@ function event_signup_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -49,7 +49,7 @@ function event_signup_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -64,14 +64,14 @@ function event_signup_field_default_field_instances() {
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Tilføj',
-          'delete' => 'Slet',
-          'description' => TRUE,
+          'add' => '',
+          'delete' => '',
+          'description' => 0,
           'edit' => 'Redigér',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -92,7 +92,7 @@ function event_signup_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -119,7 +119,7 @@ function event_signup_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_signup_id',
     'label' => 'Signup ID',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -160,20 +160,16 @@ function event_signup_field_default_field_instances() {
   // Exported field_instance: 'node-event_signup-field_signup_package'
   $field_instances['node-event_signup-field_signup_package'] = array(
     'bundle' => 'event_signup',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Frokost og overnatning er inklusive i pakken.',
+    'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -193,8 +189,8 @@ function event_signup_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 5,
+      'type' => 'options_select',
+      'weight' => 4,
     ),
   );
 
@@ -206,13 +202,13 @@ function event_signup_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -237,7 +233,7 @@ function event_signup_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -246,7 +242,6 @@ function event_signup_field_default_field_instances() {
   t('Arrangement dage');
   t('Arrangment');
   t('Bruger');
-  t('Frokost og overnatning er inklusive i pakken.');
   t('Hele pakke');
   t('Signup ID');
 

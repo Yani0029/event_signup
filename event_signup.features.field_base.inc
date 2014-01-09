@@ -48,6 +48,7 @@ function event_signup_field_default_field_bases() {
           'generalforsamling' => 'generalforsamling',
           'konference' => 'konference',
           'meeting' => 'meeting',
+          'messe' => 'messe',
           'temadag' => 'temadag',
         ),
       ),
@@ -203,13 +204,13 @@ function event_signup_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'Nej',
-        1 => 'Ja',
+        1 => ' Ja',
+        0 => ' Nej',
       ),
       'allowed_values_function' => '',
     ),
     'translatable' => 0,
-    'type' => 'list_boolean',
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_signup_user'
