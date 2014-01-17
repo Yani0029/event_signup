@@ -11,9 +11,10 @@ include_once 'event_signup.features.inc';
  */
 function event_signup_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == "event_signup_node_form") {
-    
+//    dpm($form);   
    // hide($form['field_signup_id']);
     $form['field_signup_id']['und'][0]['value']['#disabled'] =  TRUE;
+//    if ($form['field_signup_day_2'])
   }
 
 }
@@ -30,5 +31,13 @@ function event_signup_node_delete($node){
       ->condition('sid', $sid)
       ->execute();
     //node_delete($node->nid);
+  }
+}
+function event_signup_node_view($node){
+  if ($node->type == 'itchefer_invoice') {
+  //$result = field_collection_item_load($node->field_detailed_info['und'][0]['value']);
+  $result = $node->field_moms;
+ // dpm($result);
+ //  print_r($result);
   }
 }
