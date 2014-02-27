@@ -35,7 +35,7 @@ function event_signup_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_node_id',
-    'label' => 'Arrangment',
+    'label' => 'Arrangement',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -53,6 +53,49 @@ function event_signup_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event_signup-field_signup_day_2'
+  $field_instances['node-event_signup-field_signup_day_2'] = array(
+    'bundle' => 'event_signup',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 0,
+          'edit' => '',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_signup_day_2',
+    'label' => 'Arrangment dag 2',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-event_signup-field_signup_days'
   $field_instances['node-event_signup-field_signup_days'] = array(
     'bundle' => 'event_signup',
@@ -61,13 +104,13 @@ function event_signup_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => '',
           'delete' => '',
           'description' => 0,
-          'edit' => 'Redigér',
+          'edit' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
@@ -82,7 +125,7 @@ function event_signup_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_signup_days',
-    'label' => 'Arrangement dage',
+    'label' => 'Arrangement dag 1',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -107,7 +150,7 @@ function event_signup_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -180,7 +223,7 @@ function event_signup_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_signup_package',
-    'label' => 'Hele pakke',
+    'label' => 'Begge dage (inklusiv overnatning og frokost)',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -239,10 +282,11 @@ function event_signup_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Arrangement dage');
-  t('Arrangment');
+  t('Arrangement');
+  t('Arrangement dag 1');
+  t('Arrangment dag 2');
+  t('Begge dage (inklusiv overnatning og frokost)');
   t('Bruger');
-  t('Hele pakke');
   t('Signup ID');
 
   return $field_instances;
